@@ -1,0 +1,30 @@
+# nano configuration
+
+set autoindent
+set backup
+#display cursor pos
+set const
+set historylog
+#line below titlebar editable
+set morespace
+set multibuffer
+set smarthome
+#scrolling
+set smooth
+set softwrap
+set tabsize 4
+#because python
+set tabstospaces
+set undo
+
+# firstline Alt/
+# lastline Alt\
+# gotoline Ctrl_
+# prevbuf/nextbuf CtrlR Alt< Alt>
+# undo/redo AltU AltE
+# spellcheck CtrlT
+# tabstospaces AltQ
+
+include ~/.nano/html.nanorc
+#python must be after html
+include ~/.nano/python.nanorc
