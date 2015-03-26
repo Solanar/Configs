@@ -13,7 +13,7 @@
         "CVS",
         "__pycache__"
     ],
-    "font_size": 9,
+    "font_size": 12,
     "highlight_modified_tabs": true,
     "ignored_packages":
     [
@@ -26,6 +26,7 @@
     ],
     "indent_to_bracket": true,
     "preview_on_click": false,
+    "remember_open_files": true,
     "rulers":
     [
         79
@@ -34,6 +35,8 @@
     "show_panel_on_build": false,
     "soda_classic_tabs": true,
     "soda_folder_icons": false,
+    "tab_size": 4,
+    "theme": "zenburn.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
     "wrap_width": 80
