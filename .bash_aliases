@@ -10,4 +10,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # git
 alias gs='git status'
 alias gl='git log --name-only'
-alias gc="git status -s | awk '\$1 == \"M\" { print \$2; exit; }' | xargs git commit -m"
+alias gc="git status -s | awk '\$1 != \"??\" { print \$2; exit; }' | xargs git commit -m"
