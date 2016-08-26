@@ -1,7 +1,23 @@
+
+/*
+    Pakages:
+        all autocomplete
+        anaconda
+        bufferscroll
+        color highlighter
+        djaneiro
+        gitgutter
+        materialize
+        package control
+        pretty json
+        project specific syntax settings
+        python breakpoints
+        sidebarenhancements
+ */
 {
     "always_show_minimap_viewport": true,
     "bold_folder_labels": true,
-    "color_scheme": "Packages/zenburn/zenburn.tmTheme",
+    "color_scheme": "Packages/Materialize/schemes/Material Zenburn.tmTheme",
     "draw_minimap_border": true,
     "enable_telemetry": false,
     "ensure_newline_at_eof_on_save": true,
@@ -24,7 +40,12 @@
         "draw_active",
         "draw_normal"
     ],
-    "indent_to_bracket": true,
+    "indent_to_bracket": false,
+    "material_theme_compact_panel": true,
+    "material_theme_compact_sidebar": true,
+    "material_theme_small_statusbar": true,
+    "material_theme_small_tab": true,
+    "overlay_scroll_bars": "enabled",
     "preview_on_click": false,
     "remember_open_files": true,
     "rulers":
@@ -33,10 +54,8 @@
     ],
     "shift_tab_unindent": true,
     "show_panel_on_build": false,
-    "soda_classic_tabs": true,
-    "soda_folder_icons": false,
     "tab_size": 4,
-    "theme": "zenburn.sublime-theme",
+    "theme": "Material Zenburn.sublime-theme",
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
     "wrap_width": 80
