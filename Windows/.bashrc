@@ -75,13 +75,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# add python3 to path
-export PATH=/c/Python34:$PATH
-export PATH=/c/Python34/Scripts:$PATH
-
-# add prostgres to path
-export PATH="/c/Program Files/PostgreSQL/9.4/bin:$PATH"
-
-# python aliases
-alias python3=python
-alias python2=/c/Python27/python
+# User alias defs
+if [ -f ~/.user_aliases ]; then
+    . ~/.user_aliases
+fi

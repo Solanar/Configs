@@ -1,0 +1,14 @@
+
+    Pakages:
+        all autocomplete
+        anaconda
+        bufferscroll
+        color highlighter
+        djaneiro
+        gitgutter
+        materialize
+        package control
+        pretty json
+        project specific syntax settings
+        python breakpoints
+        sidebarenhancements

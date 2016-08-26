@@ -104,3 +104,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# User alias defs
+if [ -f ~/.user_aliases ]; then
+    . ~/.user_aliases
+fi
