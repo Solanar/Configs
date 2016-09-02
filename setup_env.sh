@@ -4,10 +4,7 @@
 echo -e "setting up environment...\n"
 
 # path to this repo
-configs="antyc_solutions\projects\configs"
-
-# bash
-bash_files=( ".bashrc" ".bash_aliases" )
+configs="antyc_solutions\projects\configs-dev\configs"
 
 # nano
 is_nano_installed=true
@@ -21,10 +18,11 @@ sublime_files=(
 	"Preferences.sublime-settings"
 	"GitGutter.sublime-settings"
 	"PythonBreakpoints.sublime-settings"
+	"Anaconda.sublime-settings"
 )
 is_sublime_installed=true
 type sublime >/dev/null 2>&1 || { # this arcane code removes output
-	echo -e "sublime not installed"
+	echo -e "sublime not installed";
 	is_sublime_installed=false;
 }
 
@@ -39,23 +37,41 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 		return 1 # We need to specify the drive on Windows
 	fi
 
+	windows_symlink() {
+		file="$1"
+		link="$2"
+		target="$3"
+		# TODO: move to .bak if it exists instead?
+		rm "$link" # easier to just rm if it exists
+		# echo "linking $file..."
+		cmd //c mklink "$link" "$target"
+	}
+
 	# bash
-	for file in "${bash_files[@]}"
-	do
-		echo "linking $file..."
-		cmd //c mklink "$HOME/$file" "$1\\$configs\Windows\\$file"
-	done
-	echo "linking .bash_profile..."
+	# .bashrc
+	file=".bashrc"
+	link="$HOME/$file"
+	target="$1\\$configs\Windows\\$file"
+	windows_symlink "$file" "$link" "$target"
+	# .bash_aliases
+	file=".bash_aliases"
+	link="$HOME/$file"
+	target="$1\\$configs\\$file"
+	windows_symlink "$file" "$link" "$target"
 	# .bash_profile, required on Windows
-	cmd //c mklink "$HOME/.bash_profile" \
-		"$1\\$configs\Windows\.bash_profile"
+	file=".bash_profile"
+	link="$HOME/$file"
+	target="$1\\$configs\Windows\\$file"
+	windows_symlink "$file" "$link" "$target"
 	echo ""
 
 	# nano
 	if [[ "$is_nano_installed" = true ]]; then
-		echo "linking .nanorc...";
 		# .nanorc
-		cmd //c mklink "$HOME/.nanorc" "$1\\$configs\.nanorc";
+		file=".nanorc"
+		link="$HOME/$file"
+		target="$1\\$configs\\$file"
+		windows_symlink "$file" "$link" "$target"
 		echo ""
 	fi
 
@@ -65,11 +81,11 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 
 		for file in "${sublime_files[@]}"
 		do
-			echo "linking $file..."
-			cmd //c mklink "$sublime_path/$file" \
-				"$1\\$configs\Sublime\User\\$file"
+			link="$sublime_path/$file"
+			target="$1\\$configs\Sublime\User\\$file"
+			windows_symlink "$file" "$link" "$target"
 		done
-		echo ""
+		# echo "" # uncomment if adding more symlinks
 	fi
 # elif [[ "$OSTYPE" == "" ]]; then # Linux
 #	# .bashrc

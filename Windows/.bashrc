@@ -79,3 +79,8 @@ fi
 if [ -f ~/.user_aliases ]; then
     . ~/.user_aliases
 fi
+
+# only display files or directories when autocompleting these commands
+# complete -f <cmd> # files
+# complete -d <cmd> # dirs
+complete -d cd
