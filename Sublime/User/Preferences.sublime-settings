@@ -2,6 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Materialize/schemes/Material Zenburn.tmTheme",
+	"dictionary": "Packages/Dictionaries/English (Canadian).dic",
 	"draw_minimap_border": true,
 	"enable_telemetry": false,
 	"ensure_newline_at_eof_on_save": true,
