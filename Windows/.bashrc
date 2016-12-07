@@ -84,3 +84,8 @@ fi
 # complete -f <cmd> # files
 # complete -d <cmd> # dirs
 complete -d cd
+
+# django_bash_completion
+if [ -f ~/django_bash_completion ]; then
+    . ~/django_bash_completion
+fi

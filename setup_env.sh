@@ -73,6 +73,13 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 	target="$1\\$configs\Windows\\$file"
 	windows_symlink "$file" "$link" "$target"
 	echo -e "\n"
+	
+	# django_bash_completion
+	file="django_bash_completion"
+	link="$HOME/$file"
+	target="$1\\$configs\\$file"
+	windows_symlink "$file" "$link" "$target"
+	echo -e "\n"
 
 	# nano
 	if [[ "$is_nano_installed" = true ]]; then
