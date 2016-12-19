@@ -168,6 +168,9 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 		echo -e "\n"
 	fi
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then # Linux
+	get_drive "$1"
+	if [[ $? = 1 ]]; then return 1; fi
+
 	linux_symlink() {
 		file="$1"
 		link="$2"
