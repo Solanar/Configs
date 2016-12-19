@@ -77,7 +77,7 @@ symlink_django_files() {
 
 	# django_bash_completion
 	echo "django bash completion"
-	file="django_bash_completion"
+	file=".django_bash_completion"
 	link="$HOME/$file"
 	target="$drive/$configs/$file"
 	($symlink_func "$file" "$link" "$target")
@@ -180,7 +180,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then # Linux
 			rm "$link"
 		fi
 		# echo "linking $file..."
-		ln -s "$target" "$link"
+		ln -sv "$target" "$link"
 	}
 
 	echo -e "linking...\n\n"
