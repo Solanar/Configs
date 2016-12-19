@@ -97,7 +97,7 @@ symlink_nano_files() {
 		link="$HOME/$file"
 		target="$drive/$configs/$file"
 		($symlink_func "$file" "$link" "$target")
-		echo $"\n"
+		echo -e "\n"
 	fi
 }
 
