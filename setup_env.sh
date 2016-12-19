@@ -180,7 +180,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then # Linux
 			rm "$link"
 		fi
 		# echo "linking $file..."
-		ln -s "$link" "$target"
+		ln -s "$target" "$link"
 	}
 
 	echo -e "linking...\n\n"
