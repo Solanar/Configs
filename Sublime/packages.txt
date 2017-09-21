@@ -4,11 +4,17 @@
         anaconda
         bufferscroll
         color highlighter
+        dictionaries
         djaneiro
+        environment settings
         gitgutter
+        html-css-js prettify
+        jsformat
         materialize
         package control
         pretty json
         project specific syntax settings
         python breakpoints
         sidebarenhancements
+        sublimelinter
+        text pastry
