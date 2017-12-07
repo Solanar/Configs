@@ -1,0 +1,8 @@
+{
+    "all": {
+        "wrap_line_length": 79
+    },
+    "html": {
+        "indent_scripts": "normal"
+    }
+}
