@@ -1,24 +1,31 @@
 
     Pakages:
-        all autocomplete
-        anaconda
-            requires python
-        bufferscroll
-        color highlighter
-        dictionaries
-        djaneiro
-        environment settings
-        gitgutter
-        html-css-js prettify
-        jsformat
-        materialize
-        package control
-        pretty json
-        project specific syntax settings
-        python breakpoints
-        sidebarenhancements
-        sublimelinter
-        sublimelinter-jshint
-            requires jshint
-                npm install -g jshint
-        text pastry
+        General:
+            package control
+            all autocomplete
+            bufferscroll
+            color highlighter
+            dictionaries
+            environment settings
+            gitgutter
+            materialize
+            project specific syntax settings
+            sidebarenhancements
+            sublimelinter
+            text pastry
+        Python:
+            anaconda
+            djaneiro
+            python breakpoints
+        HTML/CSS/JS/JSON:
+            All:
+                html-css-js prettify
+            JS:
+                jsformat
+                sublimelinter-jshint
+                    requires jshint
+                        npm install -g jshint
+                VueJS:
+                    vue syntax highligher
+            JSON:
+                pretty json
