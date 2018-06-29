@@ -13,6 +13,7 @@
             sidebarenhancements
             sublimelinter
             text pastry
+            https://github.com/Solanar/git-bash-sublime
         Python:
             anaconda
             djaneiro
