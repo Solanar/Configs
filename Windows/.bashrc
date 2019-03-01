@@ -59,9 +59,11 @@ if ! agent_is_running; then
     agent_start
     ssh-add
     ssh-add ~/.ssh/id_rsa_giantbyte
+    ssh-add ~/.ssh/id_rsa_m2
 elif ! agent_has_keys; then
     ssh-add
     ssh-add ~/.ssh/id_rsa_giantbyte
+    ssh-add ~/.ssh/id_rsa_m2
 fi
 
 unset env
@@ -88,4 +90,9 @@ complete -d cd
 # django_bash_completion
 if [ -f ~/django_bash_completion ]; then
     . ~/django_bash_completion
+fi
+
+# pythonrc, python autocompletion
+if [ -f ~/.pythonrc ]; then
+    export PYTHONSTARTUP="$HOME/.pythonrc"
 fi

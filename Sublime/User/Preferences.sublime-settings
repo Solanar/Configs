@@ -1,7 +1,25 @@
 {
 	"always_show_minimap_viewport": true,
+	"binary_file_patterns":
+	[
+		"*.dds",
+		"*.eot",
+		"*.gif",
+		"*.ico",
+		"*.jar",
+		"*.jpeg",
+		"*.jpg",
+		"*.pdf",
+		"*.png",
+		"*.swf",
+		"*.tga",
+		"*.ttf",
+		"*.zip",
+		"venv_perfect_arch.bak/**"
+	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Materialize/schemes/Material Zenburn.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Material Zenburn (SL).tmTheme",
+	"copy_with_empty_selection": false,
 	"dictionary": "Packages/Dictionaries/English (Canadian).dic",
 	"draw_minimap_border": true,
 	"enable_telemetry": false,
@@ -14,7 +32,6 @@
 		"CVS",
 		"__pycache__"
 	],
-	"font_size": 12,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
@@ -38,6 +55,7 @@
 		79
 	],
 	"shift_tab_unindent": true,
+	"show_full_path": false,
 	"show_panel_on_build": false,
 	"tab_size": 4,
 	"theme": "Material Zenburn.sublime-theme",

@@ -53,16 +53,19 @@ symlink_bash_files() {
 
 	# bash
 	echo "bash dot files"
+
 	# .bashrc
 	file=".bashrc"
 	link="$HOME/$file"
 	target="$drive/$configs/$env_folder/$file"
 	($symlink_func "$file" "$link" "$target")
+
 	# .bash_aliases
 	file=".bash_aliases"
 	link="$HOME/$file"
 	target="$drive/$configs/$file"
 	($symlink_func "$file" "$link" "$target")
+
 	# .bash_logout
 	file=".bash_logout"
 	link="$HOME/$file"
@@ -75,12 +78,31 @@ symlink_django_files() {
 	drive="$1"
 	symlink_func="$2"
 
-	# django_bash_completion
-	echo "django bash completion"
+	# .django_bash_completion
+	echo ".django bash completion"
 	file=".django_bash_completion"
 	link="$HOME/$file"
 	target="$drive/$configs/$file"
 	($symlink_func "$file" "$link" "$target")
+
+	echo -e "\n"
+}
+
+symlink_python_files() {
+	# symlink_func is a str
+	drive="$1"
+	symlink_func="$2"
+	env_folder="$3"
+
+	# python
+	echo "python dot files"
+
+	# .pythonrc autocompletion
+	file=".pythonrc"
+	link="$HOME/$file"
+	target="$drive/$configs/$env_folder/$file"
+	($symlink_func "$file" "$link" "$target")
+
 	echo -e "\n"
 }
 
@@ -97,6 +119,7 @@ symlink_nano_files() {
 		link="$HOME/$file"
 		target="$drive/$configs/$file"
 		($symlink_func "$file" "$link" "$target")
+
 		echo -e "\n"
 	fi
 }
@@ -131,7 +154,15 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 	windows_symlink "$file" "$link" "$target"
 	echo -e "\n"
 
+	# .inputrc, for Windows msysgit
+	file=".inputrc"
+	link="$HOME/$file"
+	target="$drive/$configs/Windows/$file"
+	windows_symlink "$file" "$link" "$target"
+
 	symlink_django_files "$drive" "windows_symlink"
+
+	symlink_python_files "$drive" "windows_symlink" "Windows"
 
 	symlink_nano_files "$drive" "windows_symlink"
 

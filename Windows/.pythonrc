@@ -1,0 +1,55 @@
+
+def closure():
+    import os
+    import types
+    import atexit
+
+    from pyreadline.unicode_helper import ensure_str
+    import readline
+
+    # monkeypatch redisplay
+    def redisplay(self):
+        self._update_line()
+    readline.rl.redisplay = types.MethodType(redisplay, readline.rl)
+    readline.redisplay = readline.rl.redisplay
+
+    # monkeypatch append_history_file
+    def append_history_file(self, n, filename=None):
+        self.mode._history.append_history_file(n, filename)
+    readline.rl.append_history_file = types.MethodType(
+        append_history_file, readline.rl
+    )
+
+    def append_history_file(self, n, filename=None):
+        if filename is None:
+            filename = self.history_filename
+        fp = open(filename, 'ab')
+        for line in self.history[-n:]:
+            fp.write(ensure_str(line.get_line_text()))
+            fp.write('\n'.encode('ascii'))
+        fp.close()
+        self.write_history_file(filename)  # truncate file
+    readline.rl.mode._history.append_history_file = types.MethodType(
+        append_history_file, readline.rl.mode._history
+    )
+    readline.append_history_file = readline.rl.append_history_file
+
+    print('python history and autocomplete enabled')
+
+    # hist
+    hist_file = os.path.join(os.environ['HOME'], '.python_history')
+    readline.read_history_file(hist_file)
+    hist_len = readline.get_current_history_length()
+
+    def save(prev_hist_len, hist_file):
+        new_hist_len = readline.get_current_history_length()
+        readline.set_history_length(200)
+        readline.append_history_file(new_hist_len - prev_hist_len, hist_file)
+    atexit.register(save, hist_len, hist_file)
+
+    # autocomp
+    readline.parse_and_bind('tab: complete')
+
+
+closure()
+del closure

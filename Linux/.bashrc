@@ -114,3 +114,8 @@ fi
 if [ -f ~/django_bash_completion ]; then
     . ~/django_bash_completion
 fi
+
+# # pythonrc, python autocompletion
+# if [ -f ~/.pythonrc ]; then
+#     export PYTHONSTARTUP="$HOME/.pythonrc"
+# fi
