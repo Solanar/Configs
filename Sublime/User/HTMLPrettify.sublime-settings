@@ -1,0 +1,9 @@
+{
+    "global_file_rules": {
+        "html": {
+            "allowed_file_extensions": [
+                "htm", "html", "xhtml", "shtml", "xml", "svg", "vue"
+            ]
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "all": {
+        "wrap_line_length": 79,
+        "end_with_newline": true
+    },
+    "html": {
+        "indent_scripts": "normal"
+    }
+}

@@ -1,14 +1,32 @@
 
     Pakages:
-        all autocomplete
-        anaconda
-        bufferscroll
-        color highlighter
-        djaneiro
-        gitgutter
-        materialize
-        package control
-        pretty json
-        project specific syntax settings
-        python breakpoints
-        sidebarenhancements
+        General:
+            package control
+            all autocomplete
+            bufferscroll
+            color highlighter
+            dictionaries
+            environment settings
+            gitgutter
+            materialize
+            project specific syntax settings
+            sidebarenhancements
+            sublimelinter
+            text pastry
+            https://github.com/Solanar/git-bash-sublime
+        Python:
+            anaconda
+            djaneiro
+            python breakpoints
+        HTML/CSS/JS/JSON:
+            All:
+                html-css-js prettify
+            JS:
+                jsformat
+                sublimelinter-jshint
+                    requires jshint
+                        npm install -g jshint
+                VueJS:
+                    vue syntax highligher
+            JSON:
+                pretty json
