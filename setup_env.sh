@@ -137,10 +137,9 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 			rm "$link"
 		fi
 		# echo "linking $file..."
-		# convert Linux path / to Windows path \
-		#  for some reason only target requires this
-		target=${target//\//\\}
-		cmd //c mklink "$link" "$target"
+                # the trailing space after $target is to force it to
+		# be quoted
+		cmd //c mklink "$link" "$target "
 	}
 
 	echo -e "linking...\n\n"
