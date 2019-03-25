@@ -3,7 +3,7 @@
         General:
             package control
             all autocomplete
-            bufferscroll
+            https://github.com/titoBouzout/BufferScroll
             color highlighter
             dictionaries
             environment settings
@@ -14,18 +14,23 @@
             sublimelinter
             text pastry
             https://github.com/Solanar/git-bash-sublime
+            filediffs
         Python:
             anaconda
             djaneiro
             python breakpoints
+            requirementstxt
         HTML/CSS/JS/JSON:
             All:
                 html-css-js prettify
             JS:
                 jsformat
+                sublimelinter
                 sublimelinter-jshint
                     requires jshint
                         npm install -g jshint
+                sublimelinter-eslint
+                babel
                 VueJS:
                     vue syntax highligher
             JSON:
