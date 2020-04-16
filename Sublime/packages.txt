@@ -13,6 +13,7 @@
             sidebarenhancements
             sublimelinter
             text pastry
+            crontab
             https://github.com/Solanar/git-bash-sublime
         Python:
             anaconda
