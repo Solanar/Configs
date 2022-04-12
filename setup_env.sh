@@ -40,7 +40,7 @@ get_drive() {
 		echo -e "Antyc drive: $1\n"
 		drive="$1"
 	else
-		echo "Usage: setup_env [Antyc drive]"
+		echo "Usage: setup_env [Antyc drive, eg E:]"
 		return 1 # We need to specify the drive on Windows
 	fi
 }
@@ -155,6 +155,7 @@ if [[ "$OSTYPE" == "msys" ]]; then # Windows
 	echo -e "\n"
 
 	# .inputrc, for Windows msysgit
+	echo ".inputrc"
 	file=".inputrc"
 	link="$HOME/$file"
 	target="$drive/$configs/Windows/$file"

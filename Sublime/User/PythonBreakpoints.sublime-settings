@@ -1,6 +1,6 @@
 {
   // preferred debugger (pdb, ipdb, pudb,..) - must support set_trace() call
-  "debugger": "bpdb",
+  "debugger": "pdb",
   // name of scope for color highlighting; replace with "mark" if "invalid" is annoying
   "highlight": "mark",
 }

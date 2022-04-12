@@ -1,3 +1,9 @@
 {
-    "python_interpreter": "C:/Users/Andrew Charles/AppData/Local/Programs/Python/Python36-32/python.exe"
+    "python_interpreter": "C:\\Users\\Andrew Charles\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
+    "auto_python_builder_enabled": false,
+    "pep8_ignore":
+    [
+        "E309",
+        "W504"
+    ]
 }

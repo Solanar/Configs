@@ -15,7 +15,8 @@
 		"*.tga",
 		"*.ttf",
 		"*.zip",
-		"venv_perfect_arch.bak/**"
+		"venv_perfect_arch.bak/**",
+		"node_modules/"
 	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/SublimeLinter/Material Zenburn (SL).tmTheme",
@@ -33,10 +34,6 @@
 		"__pycache__"
 	],
 	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
 	"indent_guide_options":
 	[
 		"draw_active",
@@ -61,5 +58,5 @@
 	"theme": "Material Zenburn.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"wrap_width": 80
+	"wrap_width": 80,
 }
