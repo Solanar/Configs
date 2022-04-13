@@ -18,3 +18,5 @@ Manually:
 		cmd //c "mklink "C:\\dir space\\user\\file" D:\path\file"
 
 For .nanorc use https://github.com/Solanar/.nano
+
+git-prompt.sh can be added to /etc/profile.d/ or sourced in .bashrc
